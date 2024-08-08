@@ -56,11 +56,8 @@ const init = () => {
 
   scene.add(new THREE.HemisphereLight(0xffffcc, 0x19bbdc, 0.5));
 
-  renderer = new THREE.WebGLRenderer({ antialias: true });
-  renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer = new THREE.WebGLRenderer();
   renderer.setSize(containerBox.width, containerBox.height);
-  renderer.shadowMap.enabled = true;
   
   window.addEventListener('resize', () => {
     camera.aspect = containerBox.width / containerBox.height;
